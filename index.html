@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1020;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #11182d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #292b50;
+        }
+
+        header h2 {
+            color: #a855f7;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a855f7;
+        }
+
+        .hero {
+            min-height: 420px;
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+            background: linear-gradient(120deg, #171044, #0b1020 60%, #27115c);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span,
+        .section-title span {
+            color: #a855f7;
+        }
+
+        .hero p {
+            margin: 15px 0;
+            color: #d1d5db;
+        }
+
+        .hero img {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #a855f7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #9333ea;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 8px 8px 0 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #7e22ce;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 55px 10%;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about-skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about p {
+            color: #d1d5db;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #1c2540;
+            border: 1px solid #37345f;
+            padding: 12px 18px;
+            border-radius: 10px;
+        }
+
+        .projects {
+            background: #11182d;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            background: #1c2540;
+            padding: 22px;
+            border-radius: 14px;
+            border: 1px solid #34385a;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: #a855f7;
+        }
+
+        .project-card h3 {
+            color: #c084fc;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #d1d5db;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 14px;
+            background: #1c2540;
+            border: 1px solid #42466b;
+            border-radius: 8px;
+            color: white;
+            font: inherit;
+        }
+
+        form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #080d19;
+            color: #b8b8c8;
+        }
+
+        @media (max-width: 750px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 50px 7%;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .about-skills,
+            .project-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 40px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>My Portfolio</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <p>Hello, I'm</p>
+            <h1>Your Name <span>Here</span></h1>
+            <h3>Student | Web Developer | Designer</h3>
+            <p>
+                I love creating modern websites and learning
+                new technologies. Welcome to my personal portfolio!
+            </p>
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <img
+            src="https://placehold.co/400x400/24134b/ffffff?text=Your+Photo"
+            alt="Your profile photo">
+    </section>
+
+    <section id="about">
+        <div class="about-skills">
+            <div class="about">
+                <h2 class="section-title">About <span>Me</span></h2>
+                <p>
+                    Hi! I am a college student interested in web development,
+                    programming, and technology. I enjoy building creative
+                    projects, solving problems, and improving my technical skills.
+                </p>
+                <p><br><strong>Education:</strong> Add your degree here</p>
+                <p><strong>Location:</strong> India</p>
+                <p><strong>Email:</strong> your.email@example.com</p>
+            </div>
+
+            <div id="skills">
+                <h2 class="section-title">My <span>Skills</span></h2>
+                <div class="skills">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">C / C++</div>
+                    <div class="skill">GitHub</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A personal website built using HTML and CSS.</p>
+                <a href="#home" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Cloud Kitchen System</h3>
+                <p>A website concept for managing food orders and kitchen operations.</p>
+                <a href="#contact" class="btn">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Calculator App</h3>
+                <p>A simple calculator project for practicing JavaScript.</p>
+                <a href="#contact" class="btn">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+
+        <div class="contact-container">
+            <div>
+                <h3>Let's work together!</h3>
+                <p>Feel free to contact me for projects or collaboration.</p>
+                <p>Email: your.email@example.com</p>
+                <p>Location: India</p>
+            </div>
+
+            <form id="contactForm">
+                <input type="text" id="name"
+                       placeholder="Your Name" required>
+
+                <input type="email" id="email"
+                       placeholder="Your Email" required>
+
+                <textarea id="message"
+                          placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© <span id="year"></span> Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("contactForm").addEventListener(
+            "submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+
+                alert("Thank you, " + name +
+                      "! The demo form is working.");
+
+                this.reset();
+            }
+        );
+    </script>
+
+</body>
+</html>
